@@ -1,0 +1,9 @@
+name: nbconvert_env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.8
+  - numpy
+  - scipy
+  - pandas
+  - matplotlib
