@@ -117,3 +117,45 @@ to indicate the copyright and license terms:
 ```
 
 [jinja]: http://jinja.pocoo.org/
+
+## Setting Up the Development Environment
+
+To set up the development environment, follow these steps:
+
+### Using `requirements.txt`
+
+1. Ensure you have Python 3.8-3.11 installed.
+2. Install the required libraries using pip:
+   ```
+   pip install -r requirements.txt
+   ```
+
+### Using `environment.yml`
+
+1. Ensure you have Conda installed.
+2. Create the environment using the provided `environment.yml` file:
+   ```
+   conda env create -f environment.yml
+   ```
+3. Activate the environment:
+   ```
+   conda activate nbconvert_env
+   ```
+
+### Using `devcontainer.json`
+
+1. Ensure you have Docker and Visual Studio Code installed.
+2. Open the project in Visual Studio Code.
+3. When prompted, reopen the project in the container.
+
+### Using `Dockerfile`
+
+1. Ensure you have Docker installed.
+2. Build the Docker image:
+   ```
+   docker build -t nbconvert_dev .
+   ```
+3. Run the Docker container:
+   ```
+   docker run -it --rm -v $(pwd):/app nbconvert_dev
+   ```
